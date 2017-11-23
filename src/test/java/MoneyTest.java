@@ -3,6 +3,7 @@ package money;
 
 import money.Dollar;
 import org.junit.Test;
+import sun.jvmstat.perfdata.monitor.MonitorDataException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -33,6 +34,12 @@ public class MoneyTest {
         Franc five = Money.franc(5);
         assertEquals(Money.franc(10), five.times(2));
         assertEquals(Money.franc(15), five.times(3));
+    }
+
+    @Test
+    public void testCurrency() {
+        assertEquals("USD", Money.dollar(1).currency());
+        assertEquals("CHF", Money.franc(1).currency());
     }
 
 }
