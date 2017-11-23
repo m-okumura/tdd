@@ -12,7 +12,7 @@ public class Main {
             out += "fizz";
         }
         if (i%5==0) {
-            out += "buzz";
+            out += "buzz!!!";
         }
         if (i%3 != 0&& i%5 !=0) {
             out += i;
