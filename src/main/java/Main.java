@@ -9,7 +9,7 @@ public class Main {
 
     static String fizzbuzz(int i, String out) {
         if (i%3==0) {
-            out += "fizz!";_
+            out += "fizz!!!";_
         }
         if (i%5==0) {
             out += "buzz!!!";
