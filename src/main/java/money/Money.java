@@ -8,6 +8,10 @@ package money;
         return new Money(amount * multiplier, currency);
     }
 
+    public Money reduce(String to) {
+        return this;
+    }
+
     String currency() {
         return currency;
     }
@@ -35,6 +39,6 @@ package money;
     }
 
     Expression plus(Money addend) {
-        return new Money(amount + addend.amount, currency);
+        return new Sum(this, addend);
     }
 }

@@ -1,7 +1,7 @@
 package money;
 
 public class Bank {
-    public Money reduce(Expression  soure, String to) {
-        return null;
+    public Money reduce(Expression  source, String to) {
+        return source.reduce(to);
     }
 }
