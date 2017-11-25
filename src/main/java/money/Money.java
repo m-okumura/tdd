@@ -4,7 +4,7 @@ package money;
     protected int amount;
     protected String currency;
 
-    Money times(int multiplier) {
+    Expression times(int multiplier) {
         return new Money(amount * multiplier, currency);
     }
 
@@ -39,7 +39,7 @@ package money;
         return new Money(amount, "CHF");
     }
 
-    Expression plus(Money addend) {
+    public Expression plus(Expression addend) {
         return new Sum(this, addend);
     }
 }
